@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2022-05-14
+  category: MyString
+  brand: MyString
+  starting: 1
+  received: 1
+  ending: 1
+  cost: 1.5
+
+two:
+  date: 2022-05-14
+  category: MyString
+  brand: MyString
+  starting: 1
+  received: 1
+  ending: 1
+  cost: 1.5

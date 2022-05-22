@@ -1,0 +1,15 @@
+<h1>Warehouses</h1>
+
+<table>
+  <tr>
+    <th>Location</th>
+  </tr>
+    <% @warehouses.each do |warehouse| %>
+    <td> <%= warehouse.location%></td>
+    <tr>
+    <% end %>
+  </tr>
+</table>
+
+<%= link_to "Add Warehouse", new_warehouse_path %>
+<%= link_to "Home", root_path %>

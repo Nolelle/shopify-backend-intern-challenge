@@ -1,0 +1,80 @@
+<%= form_with model: item do |form| %>
+ <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% item.errors.full_messages_for(:name).each do |message| %>
+     <div><%= message %></div>
+     <% end %>
+ </div>
+
+ <div>
+    <%= form.label :date %><br>
+    <%= form.text_field :date %>
+    <% item.errors.full_messages_for(:date).each do |message| %>
+     <div><%= message %></div>
+     <% end %>
+ </div>
+
+  <div>
+    <%= form.label :category %><br>
+    <%= form.text_field :category %>
+     <% item.errors.full_messages_for(:category).each do |message| %>
+     <div><%= message %></div>
+     <% end %>
+  </div>
+  
+  <div>
+    <%= form.label :brand %><br>
+    <%= form.text_field :brand %>
+   <% item.errors.full_messages_for(:brand).each do |message| %>
+     <div><%= message %></div>
+     <% end %>
+  </div>
+ 
+  <div>
+    <%= form.label :starting %><br>
+    <%= form.text_field :starting %>
+    <% item.errors.full_messages_for(:starting).each do |message| %>
+     <div><%= message %></div>
+     <% end %>
+  </div>
+  
+  <div>
+    <%= form.label :received %><br>
+    <%= form.text_field :received %>
+     <% item.errors.full_messages_for(:received).each do |message| %>
+     <div><%= message %></div>
+     <% end %>
+  </div>
+  
+  <div>
+    <%= form.label :ending %><br>
+    <%= form.text_field :ending %>
+     <% item.errors.full_messages_for(:ending).each do |message| %>
+     <div><%= message %></div>
+     <% end %>
+  </div>
+
+  <div>
+    <%= form.label :cost %><br>
+    <%= form.text_area :cost %>
+     <% item.errors.full_messages_for(:cost).each do |message| %>
+     <div><%= message %></div>
+     <% end %>
+  </div>
+
+    <div>
+    <%= form.label :warehouse_location %><br>
+    <%= form.text_area :warehouse_location %>
+     <% item.errors.full_messages_for(:warehouse_location).each do |message| %>
+     <div><%= message %></div>
+     <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+<%= link_to "Home", root_path %>

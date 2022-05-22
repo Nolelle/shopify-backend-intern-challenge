@@ -1,0 +1,32 @@
+<table class = 'table'>
+  <tr>
+    <th>Date</th>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Brand</th>
+    <th>Starting Amount</th>
+    <th>Received Amount</th>
+    <th>Ending Amount</th>
+    <th>Cost</th>
+    <th>Warehouse Location</th>
+  </tr>
+  <tr>
+    <td> <%= @item.date%></td>
+    <td><%=@item.name%></td>
+    <td> <%= @item.category%></td>
+    <td> <%= @item.brand%></td>
+    <td> <%= @item.starting%></td>
+    <td> <%= @item.received%></td>
+    <td> <%= @item.ending%></td>
+    <td> <%= @item.cost%></td>
+    <td> <%= @item.warehouse_location%></td>
+  </tr>
+</table>
+
+ <p><%= link_to "Edit", edit_item_path(@item) %></p>
+  <p><%= link_to "Destroy", item_path(@item), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></p>
+
+<%= link_to "Home", root_path %>

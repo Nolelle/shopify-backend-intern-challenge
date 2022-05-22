@@ -1,0 +1,31 @@
+<h1>Inventory Management Application</h1>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Brand</th>
+    <th>Starting Amount</th>
+    <th>Received Amount</th>
+    <th>Ending Amount</th>
+    <th>Cost</th>
+    <th>Warehouse Location</th>
+  </tr>
+    <% @items.each do |item| %>
+    <td> <%= link_to item.date, item%></td>
+    <td><%=link_to item.name, item%></td>
+    <td> <%= link_to item.category, item%></td>
+    <td> <%= link_to item.brand, item%></td>
+    <td> <%= link_to item.starting, item%></td>
+    <td> <%= link_to item.received, item%></td>
+    <td> <%= link_to item.ending, item%></td>
+    <td> <%= link_to item.cost, item%></td>
+    <td> <%= link_to item.warehouse_location, item%></td>
+    <tr>
+    <% end %>
+  </tr>
+</table>
+
+<%= link_to "Add Item", new_item_path %>
+<%= link_to "Warehouses", warehouses_path %>
+
